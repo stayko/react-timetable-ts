@@ -15,5 +15,16 @@
   "bugs": {
     "url": "https://github.com/stayko16/react-timetable-ts/issues"
   },
-  "homepage": "https://github.com/stayko16/react-timetable-ts#readme"
+  "homepage": "https://github.com/stayko16/react-timetable-ts#readme",
+  "dependencies": {
+    "@types/react": "^16.7.11",
+    "@types/react-dom": "^16.0.11",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
+  "devDependencies": {
+    "awesome-typescript-loader": "^5.2.1",
+    "source-map-loader": "^0.2.4",
+    "typescript": "^3.2.1"
+  }
 }
