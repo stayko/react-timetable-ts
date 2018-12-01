@@ -1,0 +1,19 @@
+{
+  "name": "react-timetable-ts",
+  "version": "1.0.0",
+  "description": "A React Timetable component in TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stayko16/react-timetable-ts.git"
+  },
+  "author": "Stayko Chalakov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stayko16/react-timetable-ts/issues"
+  },
+  "homepage": "https://github.com/stayko16/react-timetable-ts#readme"
+}
