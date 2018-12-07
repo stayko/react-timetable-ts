@@ -2,6 +2,7 @@ import * as React from 'react';
 import WeekView from './WeekView';
 import DayView from './DayView';
 import ListView from './ListView';
+import Controls from './Controls';
 
 enum View {
   Day,
@@ -23,12 +24,23 @@ export default class Timetable extends React.Component<Props, State> {
     currentDate: this.props.startDate || new Date(),
     view: View.Week,
   };
+
+  backHandler = () => {
+    alert('pressed back');
+  };
+
+  nextHandler = () => {
+    alert('pressed next');
+  };
+
   render() {
+    const { view, currentDate } = this.state;
     return (
       <div className="react-timetable-ts">
-        {this.state.view === View.Week && <WeekView />}
-        {this.state.view === View.Day && <DayView />}
-        {this.state.view === View.List && <ListView />}
+        <Controls backHandler={this.backHandler} nextHandler={this.nextHandler} />
+        {view === View.Week && <WeekView date={currentDate} />}
+        {view === View.Day && <DayView date={currentDate} />}
+        {view === View.List && <ListView date={currentDate} />}
       </div>
     );
   }

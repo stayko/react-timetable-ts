@@ -1,6 +1,8 @@
 import * as React from 'react';
 
-interface Props {}
+interface Props {
+  date: Date;
+}
 
 interface State {}
 
