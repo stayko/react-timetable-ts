@@ -26,11 +26,15 @@ export default class Timetable extends React.Component<Props, State> {
   };
 
   backHandler = () => {
-    alert('pressed back');
+    const d = new Date(this.state.currentDate.valueOf());
+    d.setDate(d.getDate() - 7);
+    this.setState({ currentDate: d }, () => console.log('pressed back'));
   };
 
   nextHandler = () => {
-    alert('pressed next');
+    const d = new Date(this.state.currentDate.valueOf());
+    d.setDate(d.getDate() + 7);
+    this.setState({ currentDate: d }, () => console.log('pressed next'));
   };
 
   render() {

@@ -12,8 +12,8 @@ export default class Controls extends React.Component<Props, State> {
   render() {
     return (
       <div>
-        <button onClick={() => this.props.nextHandler()}>Next</button>
         <button onClick={() => this.props.backHandler()}>Back</button>
+        <button onClick={() => this.props.nextHandler()}>Next</button>
       </div>
     );
   }

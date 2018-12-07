@@ -35,8 +35,10 @@ export default class WeekView extends React.Component<Props, State> {
     dates.forEach(d => {
       formattedDate = new Date(d.valueOf());
       result.push(
-        <div key={(id += 1)}>{`${formattedDate.getDate()}-${formattedDate.getMonth() +
-          1}-${formattedDate.getFullYear()}`}</div>
+        <div
+          className="react-timetable-ts__header-item"
+          key={(id += 1)}
+        >{`${formattedDate.getDate()}-${formattedDate.getMonth() + 1}-${formattedDate.getFullYear()}`}</div>
       );
     });
 
@@ -47,7 +49,7 @@ export default class WeekView extends React.Component<Props, State> {
     return (
       <React.Fragment>
         <h3>Week View</h3>
-        <div>{this.renderColumns()}</div>
+        <div className="react-timetable-ts__header">{this.renderColumns()}</div>
       </React.Fragment>
     );
   }
