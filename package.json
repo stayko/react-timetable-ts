@@ -4,7 +4,9 @@
   "description": "A React Timetable component in TypeScript",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start_dev": "webpack-dev-server --mode development",
+    "build_prod": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -34,6 +36,7 @@
     "tslint-react": "^3.6.0",
     "typescript": "^3.2.1",
     "webpack": "^4.26.1",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
   }
 }

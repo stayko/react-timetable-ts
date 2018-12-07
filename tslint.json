@@ -1,5 +1,5 @@
 {
-  "defaultSeverity": "error",
+  "defaultSeverity": "warning",
   "extends": ["tslint:recommended", "tslint-react", "prettier"],
   "jsRules": {},
   "rules": {
@@ -7,5 +7,10 @@
     "no-console": [false],
     "quotemark": [true, "single", "jsx-double"]
   },
-  "rulesDirectory": []
+  "rulesDirectory": [],
+  "linterOptions": {
+    "exclude": [
+      "node_modules/**/*.ts"
+    ]
+  }
 }
