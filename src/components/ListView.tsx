@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-export interface Props {}
+interface Props {}
 
-export interface State {}
+interface State {}
 
 export default class ListView extends React.Component<Props, State> {
   state = {};

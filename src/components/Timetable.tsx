@@ -9,11 +9,11 @@ enum View {
   List,
 }
 
-export interface Props {
+interface Props {
   startDate?: Date;
 }
 
-export interface State {
+interface State {
   currentDate: Date;
   view: View;
 }
