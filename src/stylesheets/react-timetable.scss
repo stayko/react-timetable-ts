@@ -10,7 +10,17 @@ body {
     &__header {
         display: flex;
         background-color: gray;
+        text-align: center;
         &-item {
+            flex: 1;
+        }   
+    }
+    &__column {
+        display: flex;
+        align-items: stretch;
+        height: 600px;
+        &-item {
+            background-color: yellowgreen;
             flex: 1;
         }
     }

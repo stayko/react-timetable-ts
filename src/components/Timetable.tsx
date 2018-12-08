@@ -5,8 +5,8 @@ import ListView from './ListView';
 import Controls from './Controls';
 
 enum View {
-  Day,
   Week,
+  Day,
   List,
 }
 
@@ -37,11 +37,18 @@ export default class Timetable extends React.Component<Props, State> {
     this.setState({ currentDate: d }, () => console.log('pressed next'));
   };
 
+  viewHandler = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const {
+      target: { value },
+    } = e;
+    this.setState({ view: parseInt(value) }, () => console.log('changed date'));
+  };
+
   render() {
     const { view, currentDate } = this.state;
     return (
       <div className="react-timetable-ts">
-        <Controls backHandler={this.backHandler} nextHandler={this.nextHandler} />
+        <Controls backHandler={this.backHandler} nextHandler={this.nextHandler} viewHandler={this.viewHandler} />
         {view === View.Week && <WeekView date={currentDate} />}
         {view === View.Day && <DayView date={currentDate} />}
         {view === View.List && <ListView date={currentDate} />}

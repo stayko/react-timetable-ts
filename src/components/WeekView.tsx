@@ -6,6 +6,8 @@ interface Props {
 
 interface State {}
 
+const WEEK_LENGTH = 6;
+
 export default class WeekView extends React.Component<Props, State> {
   state = {};
 
@@ -13,7 +15,7 @@ export default class WeekView extends React.Component<Props, State> {
     const dates = [];
     let currentDate = this.props.date;
     const endDate = new Date(currentDate.valueOf());
-    endDate.setDate(endDate.getDate() + 6);
+    endDate.setDate(endDate.getDate() + WEEK_LENGTH);
     const addDays = (d: Date, days: number) => {
       const date = new Date(d.valueOf());
       date.setDate(date.getDate() + days);
@@ -27,7 +29,7 @@ export default class WeekView extends React.Component<Props, State> {
     return dates;
   };
 
-  renderColumns = () => {
+  renderHeader = () => {
     const dates = this.getDates();
     const result: Array<JSX.Element> = [];
     let id = 0;
@@ -45,11 +47,22 @@ export default class WeekView extends React.Component<Props, State> {
     return result;
   };
 
+  renderColumns = () => {
+    const dates = this.getDates();
+    const result: Array<JSX.Element> = [];
+    let id = 0;
+    dates.forEach(d => {
+      result.push(<div className="react-timetable-ts__column-item" key={(id += 1)} />);
+    });
+    return result;
+  };
+
   render() {
     return (
       <React.Fragment>
         <h3>Week View</h3>
-        <div className="react-timetable-ts__header">{this.renderColumns()}</div>
+        <div className="react-timetable-ts__header">{this.renderHeader()}</div>
+        <div className="react-timetable-ts__column">{this.renderColumns()}</div>
       </React.Fragment>
     );
   }
