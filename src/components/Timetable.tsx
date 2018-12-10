@@ -49,9 +49,11 @@ export default class Timetable extends React.Component<Props, State> {
     return (
       <div className="react-timetable-ts">
         <Controls backHandler={this.backHandler} nextHandler={this.nextHandler} viewHandler={this.viewHandler} />
-        {view === View.Week && <WeekView date={currentDate} />}
-        {view === View.Day && <DayView date={currentDate} />}
-        {view === View.List && <ListView date={currentDate} />}
+        <div>
+          {view === View.Week && <WeekView date={currentDate} />}
+          {view === View.Day && <DayView date={currentDate} />}
+          {view === View.List && <ListView date={currentDate} />}
+        </div>
       </div>
     );
   }
