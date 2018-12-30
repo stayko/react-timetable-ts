@@ -60,7 +60,6 @@ export default class WeekView extends React.Component<Props, State> {
   render() {
     return (
       <React.Fragment>
-        <h3>Week View</h3>
         <div className="react-timetable-ts__header">{this.renderHeader()}</div>
         <div className="react-timetable-ts__column">{this.renderColumns()}</div>
       </React.Fragment>
